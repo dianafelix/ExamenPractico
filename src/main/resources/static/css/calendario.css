@@ -1,0 +1,110 @@
+/*instrucciones generales*/
+* { margin: auto; }
+body {
+    font-size: 18px;
+    font-family: Arial Narrow, sans-serif;
+    color: #333;
+}
+/*cabecera de la página*/
+h1 {
+    text-align: center; padding: 0.5em;
+}
+/*div principal del calendario*/
+#calendario {
+    border: 10px double black ;
+    max-width: 90%;
+    background-color:#fffafa;
+    text-align: center;
+}
+/*tabla del calendario*/
+#diasc {
+    border: 1px solid black;
+    border-collapse:separate;
+    border-spacing: 4px;
+}
+#diasc th,#diasc td {
+    font-family: Arial Narrow, sans-serif;
+    font-size: 15px;
+    text-align: left;
+    width: 200px;
+    height: 70px;
+}
+
+table,tr{
+    width: 100%;
+}
+#diasc th {
+    text-align: center;
+    color:#FA5858;
+    background-color: white;
+}
+#diasc td {
+    color: black;
+    background-color: white ;
+}
+/*línea de la fecha actual*/
+#fechaactual {
+    font: bold 12pt arial;
+    padding: 0.4em;
+}
+#fechaactual i {
+    cursor: pointer ;
+}
+#fechaactual i:hover {
+    color: #FA5858;
+}
+/*formulario de busqueda de fechas*/
+#buscafecha {
+    background-color:  #81BEF7;
+    color: white;
+    padding: 5px }
+#buscafecha select, #buscafecha input  {
+    background-color: white;
+    color:#FA5858;
+    font: bold 10pt arial;
+}
+#buscafecha [type=text]  {
+    text-align: center;
+}
+#buscafecha  [type=button] {
+    cursor: pointer;
+}
+/*cabecera del calendario*/
+#anterior {
+    float: left;
+    width: 100px;
+    font-family: Arial Narrow, sans-serif;
+    padding: 0.5em 0.1em; cursor: pointer ;
+}
+#posterior {
+    float: right;
+    width: 100px;
+    font-family: Arial Narrow, sans-serif;
+    padding: 0.5em 0.1em;
+    cursor: pointer ;}
+#anterior:hover {
+    color: #FA5858;
+    text-decoration: underline;
+}
+#posterior:hover {
+    color: #FA5858;
+    text-decoration: underline;
+}
+#titulos {
+    font-family: Arial Narrow, sans-serif;
+    padding: 0.2em; }
+#boton{
+    margin-left: 40%;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    border-radius: 6px;
+    border: 2px solid;
+}
+#boton:hover{
+    color: #FA5858;
+    background-color: #ffffff;
+}

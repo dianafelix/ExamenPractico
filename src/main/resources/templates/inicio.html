@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cita Médica</title>
+
+    <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+    <link  href="../static/css/style.css" th:href="@{/css/style.css}"
+           rel="stylesheet" media="screen" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../static/css/images/icon.png" th:href="@{'/css/images/icon.png' }"/>
+
+
+</head>
+<body>
+<img id="foto" src="../static/css/images/portada.jpg" th:src="@{'/css/images/portada.jpg' }" />
+<h1>Cita Médica</h1>
+<form  action="calendario" method="post" target="_blank">
+    <fieldset>
+        <legend>Datos</legend>
+        <p>
+            <label>Asunto</label>
+            <input type = "text"
+                   id = "asunto" name="asunto" />
+        </p>
+
+        <p>
+            <label for="appt">Hora:</label>
+
+            <input type="time" id="appt" name="hora"
+                   min="9:00" max="16:00" required ><span class="note">9:00am a 16:00pm</span>
+
+        </p>
+        <label for="meeting">Fecha : </label><input id="meeting" type="date" value="2019-03-13" name="fecha"/>
+
+        <p>Doctor:
+            <select name="doctores">
+                <option value="doc1" name ="doc1">Derek Shepherd</option>
+                <option value="doc2" name="doc2">Meredith Grey </option>
+                <option value="doc3" name="doc3">Cristina Yang</option>
+                <option value="doc4" name="doc4">Callie Torres</option>
+                <option value="doc5" name="doc5">Alex Karev</option>
+                <option value="doc6" name="doc6">Lexie Grey</option>
+                <option value="doc7" name="doc7">Jackson Avery </option>
+                <option value="doc8" name="doc8">Miranda Bailey</option>
+
+            </select>
+            <br><br>
+        <p><input type="submit" value="Enviar datos"></p>
+    </fieldset>
+</form>
+
+</body>
+</html>
