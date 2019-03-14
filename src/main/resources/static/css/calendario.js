@@ -2,6 +2,8 @@
 meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 lasemana=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"]
 diassemana=["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"];
+
+
 //Tras cargarse la página ...
 window.onload = function() {
 //fecha actual

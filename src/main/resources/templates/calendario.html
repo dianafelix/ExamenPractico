@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns:th="http://www.thymeleaf.org">
+
     <html>
     <head>
         <title>Calendario</title>
@@ -8,24 +10,84 @@
                rel="stylesheet" media="screen" type="text/css" />
         <script type="text/javascript" src="../static/css/calendario.js" th:src="@{'/css/calendario.js' }"></script>
         <link rel="shortcut icon" type="image/png" href="../static/css/images/icon.png" th:href="@{'/css/images/icon.png' }"/>
+        <a href="inicio"><img id="foto3" src="../static/css/images/home.png" th:src="@{'/css/images/home.png'}" /></a>
 
 
     </head>
 <body>
 <h1>Calendario de Citas Médicas</h1>
+
+
 <br/><br/>
+<dialog id="message">
+    Citas del dia
+
+    <ol>
+        <li th:each="fila: ${citas}" th:text="${fila.getAsunto()+ ' ' +fila.getHora()+ ' ' +fila.getFecha()+ ' ' +fila.getDoctor()}"  ></li>
+    </ol>
+
+    <button id="close" onclick="document.getElementById('message').close()">Cerrar</button>
+</dialog>
 <div id="calendario">
     <div id="anterior" onclick="mesantes()"></div>
     <div id="posterior" onclick="mesdespues()"></div>
     <h2 id="titulos"></h2>
     <table id="diasc">
         <tr id="fila0"><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
-        <tr id="fila1"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr id="fila2"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr id="fila3"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr id="fila4"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr id="fila5"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr id="fila6"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr id="fila1">
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+        </tr>
+        <tr id="fila2">
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+        </tr>
+        <tr id="fila3">
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+        </tr>
+        <tr id="fila4">
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+        </tr>
+        <tr id="fila5">
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+        </tr>
+        <tr id="fila6">
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+            <td onclick="document.getElementById('message').show()"></td>
+        </tr>
     </table>
     <div id="fechaactual"><i onclick="actualizar()"></i></div>
     <div id="buscafecha">
@@ -50,6 +112,7 @@
 
                 <input id="boton" type="button" value="BUSCAR" onclick="mifecha()" />
             </p>
+
         </form>
     </div>
 </div>
